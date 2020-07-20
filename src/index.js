@@ -1,17 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'; // usar react para entender html en el js
+import ReactDOM from 'react-dom'; // ayuda a renderizar codigo js en el html
+//import PrimeraApp from './PrimeraApp';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import CounterApp from './CounterApp';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+//const mensaje = <h1>Hola mundo desde React.</h1>;
+//console.log(mensaje);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const divRoot = document.querySelector('#root');
+//console.log(divRoot);
+
+//llamar el objeto de react-dom para que coloque lo que yo quiero en el html
+// ofrece unas caracteristica, ofrece para comunicar entre componentes
+//ReactDOM.render( mensaje, divRoot );
+
+// render desde un componente
+//ReactDOM.render( <PrimeraApp />, divRoot ); // llamar el component
+
+// tarea
+ReactDOM.render( <CounterApp value = { 3 } />, divRoot ); // llamar el component
